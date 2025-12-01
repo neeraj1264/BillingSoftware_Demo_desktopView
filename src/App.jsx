@@ -14,7 +14,7 @@ import OrderReport from "./OrderReport";
 
 const App = () => {
 
-  const [isPasswordCorrect, setIsPasswordCorrect] = useState(false);
+  const [isPasswordCorrect, setIsPasswordCorrect] = useState(true);
   const [password, setPassword] = useState("");
   const [showPasswordPopup, setShowPasswordPopup] = useState(true);
 
