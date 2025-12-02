@@ -515,9 +515,9 @@ export default function KhataBook() {
                         </div>
                       )}
 
-                      {/* Contact Row */}
+                       {/* Contact Row */}
                       <div className="contact-row">
-                        {totalYouWillGet > 0 && (
+                        {owed > 0 && (
                           <>
                             <button
                               className="contact-btn whatsappp"
