@@ -73,10 +73,10 @@ function buildMobileInvoiceHtml(order = {}) {
     <body>
       <div style="border:2px dotted; margin:0 0 5px 0; padding:.4rem;">
         <div>
-          <img class="logo" src="/logo2.png" alt="Logo" width="150" onerror="this.style.display='none'" />
+          <img class="logo" src="/logo.png" alt="Logo" width="150" onerror="this.style.display='none'" />
         </div>
-        <h1>Restaurent Name</h1>
-        <p style="text-align:center; margin-top:0; font-size:15px; padding:0 2px;">Restaurent Address.....<br/>(136-128),<br/>70158-23645 70155-16336</p>
+        <h1>Foodies Hub</h1>
+        <p style="text-align:center; margin-top:0; font-size:15px; padding:0 2px;">Pehowa, haryana, 136128<br/>70158-23645 70155-16336</p>
         <hr />
         <h2>Invoice Details</h2>
 

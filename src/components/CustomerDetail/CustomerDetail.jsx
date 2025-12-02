@@ -608,7 +608,7 @@ const CustomerDetail = () => {
         >
           {logoAvailable && (
             <img
-              src="/logo2.png"
+              src="/logo.png"
               alt="Logo5"
               width={150}
               className="logo"
@@ -618,7 +618,7 @@ const CustomerDetail = () => {
           <h1
             style={{ textAlign: "center", margin: ".5rem", fontSize: "25px" }}
           >
-            Restaurent Name
+            Foodies Hub
           </h1>
           <p
             style={{
@@ -628,9 +628,7 @@ const CustomerDetail = () => {
               padding: "0 2px",
             }}
           >
-            Restaurent Address......
-            <br />
-            (136-128),
+            Pehowa, Haryana, 136128
             <br />
             70158-23645 70155-16336
           </p>
