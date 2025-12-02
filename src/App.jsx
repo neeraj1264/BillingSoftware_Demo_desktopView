@@ -10,7 +10,7 @@ import { CustomerData } from "./components/data/CustomerData";
 import AddToHomeModal from "./components/AddToHome/AddToHome";
 import Advance from "./components/advance/Advance";
 import OrderReport from "./OrderReport";
-
+import KhataBook from "./components/KhatabookApp/KhatabookApp";
 
 const App = () => {
 
@@ -135,7 +135,7 @@ const App = () => {
         <Route path="/history" element={<History />} />
         <Route path="/advance" element={<Advance />} />
         <Route path="/report" element={<OrderReport />} />
-
+        <Route path="/KhataBook" element={<KhataBook />} />
       </Routes>
     </Router>
        )}

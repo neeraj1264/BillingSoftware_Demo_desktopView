@@ -48,6 +48,7 @@ function buildMobileInvoiceHtml(order = {}) {
   const delivery = Number(order.delivery || 0) || 0;
   const discount = Number(order.discount || 0) || 0; // assume absolute amount
   const discountPercentage = Number(order.discountPercentage || "") || "";
+  const pendingAmount = Number(order.pendingAmount || 0) || 0;
   const netTotal = itemTotal + delivery - discount;
 
   const html = `<!doctype html>
@@ -123,6 +124,9 @@ function buildMobileInvoiceHtml(order = {}) {
         ` : ""}
 
         <p class="totalAmount">Net Total: ₹${netTotal.toFixed(2)}</p>
+          ${(pendingAmount > 0) ? `
+        <p style="text-align: center">pending Amount: ${pendingAmount}</p>
+        `: ""}
         <hr />
         <div style="text-align:center; font-size:15px; padding:.1rem 0 1rem;">Thank You Visit Again!</div>
       </div>

@@ -154,6 +154,18 @@ const Header = ({ headerName, setSearch, onClick }) => {
                 Order History
               </NavLink>
             </li>
+                       <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav-link custom-text active"
+                    : "nav-link custom-text"
+                }
+                to="/KhataBook"
+              >
+                Khata Book
+              </NavLink>
+            </li>
             <li className="nav-item">
               <NavLink
                 className={({ isActive }) =>
@@ -177,7 +189,7 @@ const Header = ({ headerName, setSearch, onClick }) => {
                 to="/customer-data"
                 onClick={guardcustomerdata}
               >
-                Customer Data
+                Customer Ledger
               </NavLink>
             </li>
             <li className="nav-item">

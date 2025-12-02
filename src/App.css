@@ -1,5 +1,6 @@
 :root {
   /* --bg: #ED6629; */
+  --gredientBG: linear-gradient(135deg, #9b0000 0%, #3b0101 100%);
   --bg: #3b0101;
   --text: #9b0000;
   --in: #2d3748;
