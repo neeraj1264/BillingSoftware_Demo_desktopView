@@ -173,13 +173,13 @@ const Invoice = () => {
     // Get fresh status on click
     const currentStatus = await checkBackend();
 
-    if (currentStatus) {
-      navigate("/NewProduct");
-    } else {
-      alert("You’re offline—cannot add a new product right now.");
-    }
-    setIsChecking(false);
-  };
+  //   if (currentStatus) {
+  //     navigate("/NewProduct");
+  //   } else {
+  //     alert("You’re offline—cannot add a new product right now.");
+  //   }
+  //   setIsChecking(false);
+  // };
 
   useEffect(() => {
     const interval = setInterval(() => setNow(Date.now()), 1000);
@@ -293,9 +293,9 @@ const Invoice = () => {
 
     async function hydrateFromIDB() {
       try {
-        const offline = await getAll("products");
+        const  = await getAll("products");
         if (cancelled) return;
-        setSelectedProducts(offline);
+        setSelectedProducts();
       } catch (err) {
         console.error("Error loading from IDB:", err);
       } finally {
@@ -381,7 +381,7 @@ const Invoice = () => {
         if (!cancelled) setSavedCustomers(list);
       } catch (err) {
         // fallback to IndexedDB/localStorage
-        const offline = await getAll("customers");
+        const  = await getAll("customers");
         if (!cancelled && offline && offline.length) {
           setSavedCustomers(offline);
           return;
