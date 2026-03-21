@@ -173,13 +173,13 @@ const Invoice = () => {
     // Get fresh status on click
     const currentStatus = await checkBackend();
 
-  //   if (currentStatus) {
-  //     navigate("/NewProduct");
-  //   } else {
-  //     alert("You’re offline—cannot add a new product right now.");
-  //   }
-     setIsChecking(false);
-   };
+    if (currentStatus) {
+      navigate("/NewProduct");
+    } else {
+      alert("You’re offline—cannot add a new product right now.");
+    }
+    setIsChecking(false);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => setNow(Date.now()), 1000);
@@ -295,7 +295,7 @@ const Invoice = () => {
       try {
         const offline = await getAll("products");
         if (cancelled) return;
-        setSelectedProducts();
+        setSelectedProducts(offline);
       } catch (err) {
         console.error("Error loading from IDB:", err);
       } finally {
