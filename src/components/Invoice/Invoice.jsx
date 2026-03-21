@@ -175,10 +175,9 @@ const Invoice = () => {
 
     if (currentStatus) {
       navigate("/NewProduct");
-    } 
-    // else {
-    //   alert("You’re offline—cannot add a new product right now.");
-    // }
+    } else {
+      alert("You’re offline—cannot add a new product right now.");
+    }
     setIsChecking(false);
   };
 
