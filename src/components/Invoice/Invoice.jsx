@@ -288,44 +288,44 @@ const Invoice = () => {
     }
   }, [location]);
 
-  useEffect(() => {
-    let cancelled = false;
+  // useEffect(() => {
+  //   let cancelled = false;
 
-    async function hydrateFromIDB() {
-      try {
-        const  = await getAll("products");
-        if (cancelled) return;
-        setSelectedProducts();
-      } catch (err) {
-        console.error("Error loading from IDB:", err);
-      } finally {
-        if (!cancelled) setLoading(false);
-      }
-    }
+  //   async function hydrateFromIDB() {
+  //     try {
+  //       const  = await getAll("products");
+  //       if (cancelled) return;
+  //       setSelectedProducts();
+  //     } catch (err) {
+  //       console.error("Error loading from IDB:", err);
+  //     } finally {
+  //       if (!cancelled) setLoading(false);
+  //     }
+  //   }
 
-    async function refreshFromServer() {
-      try {
-        const products = await fetchProducts();
-        if (cancelled) return;
-        setSelectedProducts(products);
-        await saveItems("products", products);
-      } catch (err) {
-        console.warn("Server fetch failed, keeping IDB data:", err);
-      }
-    }
+  //   async function refreshFromServer() {
+  //     try {
+  //       const products = await fetchProducts();
+  //       if (cancelled) return;
+  //       setSelectedProducts(products);
+  //       await saveItems("products", products);
+  //     } catch (err) {
+  //       console.warn("Server fetch failed, keeping IDB data:", err);
+  //     }
+  //   }
 
-    hydrateFromIDB(); // 1️⃣ immediately populate from IDB & hide spinner
-    refreshFromServer(); // 2️⃣ then update in background
+  //   hydrateFromIDB(); // 1️⃣ immediately populate from IDB & hide spinner
+  //   refreshFromServer(); // 2️⃣ then update in background
 
-    // also restore the cart‑to‑send list
-    const stored = JSON.parse(localStorage.getItem("productsToSend")) || [];
-    setProductsToSend(stored);
-    localStorage.removeItem("delivery");
+  //   // also restore the cart‑to‑send list
+  //   const stored = JSON.parse(localStorage.getItem("productsToSend")) || [];
+  //   setProductsToSend(stored);
+  //   localStorage.removeItem("delivery");
 
-    return () => {
-      cancelled = true;
-    };
-  }, []);
+  //   return () => {
+  //     cancelled = true;
+  //   };
+  // }, []);
 
   // Persist cart to IDB whenever it changes
   useEffect(() => {
