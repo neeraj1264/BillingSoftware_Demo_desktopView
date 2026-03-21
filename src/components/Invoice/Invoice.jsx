@@ -173,9 +173,10 @@ const Invoice = () => {
     // Get fresh status on click
     const currentStatus = await checkBackend();
 
-    // if (currentStatus) {
-    //   navigate("/NewProduct");
-    // } else {
+    if (currentStatus) {
+      navigate("/NewProduct");
+    } 
+    // else {
     //   alert("You’re offline—cannot add a new product right now.");
     // }
     setIsChecking(false);
