@@ -179,7 +179,7 @@ const Invoice = () => {
   //     alert("You’re offline—cannot add a new product right now.");
   //   }
   //   setIsChecking(false);
-  // };
+   };
 
   useEffect(() => {
     const interval = setInterval(() => setNow(Date.now()), 1000);
