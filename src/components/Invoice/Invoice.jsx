@@ -178,7 +178,7 @@ const Invoice = () => {
   //   } else {
   //     alert("You’re offline—cannot add a new product right now.");
   //   }
-  //   setIsChecking(false);
+     setIsChecking(false);
    };
 
   useEffect(() => {
